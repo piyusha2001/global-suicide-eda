@@ -1,6 +1,6 @@
 # Global Suicide EDA
 
-This project explores global suicide statistics using data from the World Health Organization (WHO). The analysis aims to uncover trends, patterns, and insights related to suicide rates across different countries, age groups, and genders.
+This project explores global suicide statistics using data from the World Health Organization (WHO). The analysis aims to uncover trends, patterns, and insights related to suicide rates across different countries, age groups and genders.
 
 https://github.com/user-attachments/assets/71da4366-293b-4bf5-abd6-c7f75e3ec9fa
 
