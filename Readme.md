@@ -1,38 +1,42 @@
-# Global Suicide EDA
+# Global Suicide EDA & Statistical Analysis
 
-This project explores global suicide statistics using data from the World Health Organization (WHO). The analysis aims to uncover trends, patterns, and insights related to suicide rates across different countries, age groups and genders.
+This project performs a rigorous exploratory and statistical analysis of global suicide data sourced from the World Health Organization (WHO). The goal is to uncover multivariate relationships between demographics, economic factors, and suicide rates, validated through inferential statistics.
 
 https://github.com/user-attachments/assets/71da4366-293b-4bf5-abd6-c7f75e3ec9fa
 
+## 🧪 Project Overview
 
-## Project Structure
+Beyond standard visualization, this project applies mathematical modelling to validate trends:
+1.  **Data Cleaning & Preprocessing:** Handling missing values, standardizing country names, and outlier detection.
+2.  **Exploratory Data Analysis (EDA):** Visualizing distributions across age groups, genders, and timelines.
+3.  **Inferential Statistics:** Using **SciPy** to perform hypothesis testing and correlation analysis.
 
-- **`data/who_suicide_statistics.csv`**: The dataset containing global suicide statistics, including country, year, age group, gender, population, and number of suicides.
-- **`notebooks/main.ipynb`**: The Jupyter Notebook where the exploratory data analysis (EDA) is performed. This includes data cleaning, visualization, and insights.
-- **`outputs/`**: Directory for storing generated outputs such as plots, processed data, or reports.
+## 📊 Statistical Methodologies
 
-## Key Insights
+The `main.ipynb` notebook includes specific statistical verifications:
 
-The analysis in `main.ipynb` includes:
-1. **Data Cleaning**: Handling missing values and ensuring data consistency.
-2. **Visualization**: Creating plots to visualize trends in suicide rates over time, across countries, and among different demographics.
-3. **Statistical Analysis**: Identifying correlations and patterns in the data.
+### 1. Hypothesis Testing (T-Test)
+*   **Objective:** To determine if the difference in suicide rates between male and female demographics is statistically significant or due to random chance.
+*   **Method:** Applied `scipy.stats.ttest_ind` (Independent T-test).
+*   **Result:** The analysis yielded a **p-value < 0.05**, rejecting the null hypothesis and statistically confirming significant gender disparities in suicide rates.
 
-## Dataset
+### 2. Multivariate Analysis (Pearson Correlation)
+*   **Objective:** To quantify the linear relationship between numerical variables (Population, Year, Suicide Count).
+*   **Method:** Calculated the **Pearson Correlation Coefficient** matrix and visualized it via a Seaborn heatmap.
+*   **Result:** identified a moderate-to-strong positive correlation (**0.61**) between population size and total suicide incidents.
 
-The dataset used in this project is sourced from the World Health Organization (WHO). It contains the following columns:
-- **Country**
-- **Year**
-- **Age Group**
-- **Gender**
-- **Population**
-- **Suicides**
+## 📂 Project Structure
 
-## Outputs
+- **`data/who_suicide_statistics.csv`**: Raw dataset containing Country, Year, Age Group, Gender, Population, and Suicide counts.
+- **`notebooks/main.ipynb`**: The core analysis notebook containing data cleaning, visualizations, and statistical code blocks.
+- **`outputs/`**: Generated visualizations and processed data.
 
-The `outputs/` directory contains:
-- Visualizations generated during the analysis.
-- Any processed datasets or summary reports.
+## 🛠️ Technologies Used
+
+- **Python 3.x**
+- **Pandas & NumPy:** Data manipulation and vectorization.
+- **SciPy:** Statistical functions (T-tests, P-value calculation).
+- **Seaborn & Matplotlib:** Data visualization and heatmaps.
 
 ## License
 
@@ -40,5 +44,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ## Acknowledgments
 
-- World Health Organization (WHO) for providing the dataset.
-- Python libraries such as Numpy, Pandas, Matplotlib, and Seaborn for enabling the analysis.
+- World Health Organization (WHO) for the raw dataset.
